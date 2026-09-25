@@ -1,0 +1,1 @@
+MPI was used to divide the range 1 to 10,000,000 among multiple processes. Each process calculated a partial sum independently. The partial sums were combined using MPI_Reduce() with the MPI_SUM operation to produce the final result. The computed total sum was 50,000,005,000,000, demonstrating parallel computation using MPI.
