@@ -1,0 +1,23 @@
+Processors	Time (seconds)
+1		0.024473
+2		0.013564
+4		0.014221
+8		0.015448
+
+Speedup = T1 / Tp
+T1 = 0.024473
+
+For 1 processor : 0.024473 / 0.024473 = 1.000
+For 2 processors: 0.024473 / 0.013564 = 1.804
+For 4 processors: 0.024473 / 0.014221 = 1.721
+For 8 processors: 0.024473 / 0.015448 = 1.584
+
+
+Number of Processors	Execution Time (s)	Speedup
+1			0.024473		1.000
+2			0.013564		1.804
+4			0.014221		1.721
+8			0.015448		1.584
+
+
+The execution time and speedup of the MPI program were measured using 1, 2, 4, and 8 processors. The execution time decreased from 0.024473 seconds with one processor to 0.013564 seconds with two processors, achieving the highest speedup of 1.804. Increasing the number of processors beyond two did not provide further improvement because the computational workload was relatively small compared to the communication and synchronization overhead of MPI. The results demonstrate the impact of parallel processing and the limitations of scalability for small workloads.
