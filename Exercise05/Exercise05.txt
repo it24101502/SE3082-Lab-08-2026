@@ -1,0 +1,6 @@
+1.
+The program was modified so that the sender and receiver used different message tags. Process 0 sent a message with tag 0 while Process 1 attempted to receive a message with tag 99. Since MPI matches messages using the source, destination, and tag values, the receive operation could not find a matching message and remained blocked indefinitely. As a result, the program hung after displaying "Process 0 sent 42".
+
+
+2.
+MPI_Bsend() was used to send messages through a user-provided buffer. The sender was able to continue execution without waiting for the receiver because the outgoing messages were first stored in the attached buffer. This prevents sent data from being overwritten and allows multiple messages to be safely transmitted using the same variable.
